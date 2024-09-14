@@ -287,6 +287,7 @@ snippet '''5' "user" iAr
 \Phi
 endsnippet
 priority 0
+
 context "math()"
 snippet ''4' "user" iAr
 \psi
@@ -298,6 +299,12 @@ snippet '''4' "user" iAr
 \Psi
 endsnippet
 priority 0
+
+context "math()"
+snippet ''n' "nabla" iAr
+\nabla
+endsnippet
+
 context "math()"
 snippet ''o' "user" iAr
 \omega
@@ -341,7 +348,7 @@ snippet '([A-Za-z0-9]+)(bf|rm) ' "user" iAr
 endsnippet
 
 context "math()"
-snippet '([A-Za-z0-9]+)bs ' "user" iAr
+snippet '(\\?[A-Za-z0-9]+)bs ' "user" iAr
 \boldsymbol{`!p snip.rv = match.group(1)`}
 endsnippet
 
