@@ -1,12 +1,13 @@
 global !p
 def math():
     return vim.exec_lua('''
-        local trs = vim.inspect_pos().treesitter
-        local res = false
-        for _, item in ipairs(trs) do
-            if item.capture == "markup.math" then res = true end
-        end
-        return res
+        -- local trs = vim.inspect_pos().treesitter
+        -- local res = false
+        -- for _, item in ipairs(trs) do
+        --    if item.capture == "markup.math" then res = true end
+        -- end
+        -- return res
+        return true
 ''')
 
 def gen_mat(snip, delim, rows, cols):
@@ -599,3 +600,9 @@ snippet ';v ' "vec" wAr
 \vec{${1:${VISUAL}}}
 endsnippet
 
+priority 101
+context "math()"
+snippet ';~' "tidle" wA
+\sim
+endsnippet
+priority 0

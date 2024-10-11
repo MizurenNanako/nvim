@@ -17,7 +17,7 @@
 --   },
 -- }
 
--- require "dirty_user_job"
+require "dirty_user_job"
 require "user_formatter"
 
 -- if vim.g.neovide then
