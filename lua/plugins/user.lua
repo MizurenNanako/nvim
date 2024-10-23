@@ -74,8 +74,11 @@ return {
                         :with_cr(cond.none()),
                 },
                 -- disable for .vim files, but it work for another filetypes
-                Rule("a", "a", "-vim", "-md")
+                Rule("a", "a", "-vim")
             )
+            require("nvim-autopairs").setup {
+                disable_filetype = { "TelescopePrompt", "markdown" },
+            }
         end,
     },
 }
