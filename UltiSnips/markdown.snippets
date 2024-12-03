@@ -354,6 +354,11 @@ snippet '(\\?[A-Za-z0-9]+)bs ' "user" iAr
 endsnippet
 
 context "math()"
+snippet '(\\?[A-Za-z0-9]+)vv' "user" iAr
+\vec{`!p snip.rv = match.group(1)`}
+endsnippet
+
+context "math()"
 snippet '//' "user" iAr
 \dfrac{${1:${VISUAL}}}{$2}$0
 endsnippet
@@ -587,7 +592,7 @@ endsnippet
 
 context "math()"
 pre_expand "gen_mat(snip, match.group(1), int(match.group(2)), int(match.group(3)))"
-snippet ';(|[p|P|b|B|v|V])mat(\d)(\d)' "matnm" bAr
+snippet ';(|[p|P|b|B|v|V])mat(\d)(\d) ' "matnm" wAr
 endsnippet
 
 context "math()"
@@ -604,5 +609,12 @@ priority 101
 context "math()"
 snippet ';~' "tidle" wA
 \sim
+endsnippet
+priority 0
+
+priority 101
+context "math()"
+snippet ';o' "tidle" wA
+\circ
 endsnippet
 priority 0

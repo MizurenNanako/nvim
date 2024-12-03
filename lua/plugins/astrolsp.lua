@@ -44,6 +44,7 @@ return {
             "ocamllsp",
             "rust_analyzer",
             "clangd",
+            "millet",
             -- "hls",
         },
         -- customize language server configuration options passed to `lspconfig`
@@ -54,6 +55,15 @@ return {
                 root_dir = function(fname)
                     local util = require "lspconfig.util"
                     return util.root_pattern(".opam", "dune", "package.json")(fname)
+                        -- Fallback to the current file's directory (single-file mode)
+                        or util.path.dirname(fname)
+                end,
+                capabilities = {},
+            },
+            millet = {
+                root_dir = function(fname)
+                    local util = require "lspconfig.util"
+                    return util.root_pattern(".cm", ".mlb")(fname)
                         -- Fallback to the current file's directory (single-file mode)
                         or util.path.dirname(fname)
                 end,
