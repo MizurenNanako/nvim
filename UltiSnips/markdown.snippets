@@ -21,16 +21,11 @@ def gen_mat(snip, delim, rows, cols):
     snip.expand_anon(ss)
 endglobal
 
-snippet $$$$ "display" iA
+snippet $$ "display" i
 $$
 $1
 $$
 $0
-endsnippet
-
-context "math()"
-snippet { "brace" iA
-{$0}
 endsnippet
 
 context "math()"
@@ -39,582 +34,617 @@ snippet ^ "super" iA
 endsnippet
 
 context "math()"
-snippet ';dis ' "display style" iAr
+snippet 'dis' "display style" ir
 \displaystyle 
 endsnippet
 
 context "math()"
-snippet ';k ' "ket" iAr
+snippet 'k' "ket" ir
 \ket{$1}$0
 endsnippet
 
 context "math()"
-snippet ';b ' "bra" iAr
+snippet 'b' "bra" ir
 \bra{$1}$0
 endsnippet
 
 context "math()"
-snippet ';bk ' "braket" iAr
+snippet 'bk' "braket" ir
 \braket{$1|$2}$0
 endsnippet
 
 context "math()"
-snippet ';bbk ' "braket2" iAr
+snippet 'bbk' "braket2" ir
 \braket{$1|$2|$3}$0
 endsnippet
 
 context "math()"
-snippet ';sum' "user" iAr
+snippet 'sum' "user" ir
 \sum_{$1}$0
 endsnippet
 
 context "math()"
-snippet ''a' "user" iAr
+snippet ''a' "user" ir
 \alpha
 endsnippet
 
 priority 101
 context "math()"
-snippet '''a' "user" iAr
+snippet '''a' "user" ir
 \Alpha
 endsnippet
 priority 0
 
 context "math()"
-snippet ''b' "user" iAr
+snippet ''b' "user" ir
 \beta
 endsnippet
 
 priority 101
 context "math()"
-snippet '''b' "user" iAr
+snippet '''b' "user" ir
 \Beta
 endsnippet
 priority 0
 
 context "math()"
-snippet ''g' "user" iAr
+snippet ''g' "user" ir
 \gamma
 endsnippet
 
 priority 101
 context "math()"
-snippet '''g' "user" iAr
+snippet '''g' "user" ir
 \Gamma
 endsnippet
 priority 0
 
 context "math()"
-snippet ''d' "user" iAr
+snippet ''d' "user" ir
 \delta
 endsnippet
 
 priority 101
 context "math()"
-snippet '''d' "user" iAr
+snippet '''d' "user" ir
 \Delta
 endsnippet
 priority 0
 
 context "math()"
-snippet ''e' "user" iAr
+snippet ''e' "user" ir
 \epsilon
 endsnippet
 
 priority 101
 context "math()"
-snippet '''e' "user" iAr
+snippet '''e' "user" ir
 \Epsilon
 endsnippet
 priority 0
 
 context "math()"
-snippet ''ve' "user" iAr
+snippet ''ve' "user" ir
 \varepsilon
 endsnippet
 
 context "math()"
-snippet ''z' "user" iAr
+snippet ''z' "user" ir
 \zeta
 endsnippet
 
 priority 101
 context "math()"
-snippet '''z' "user" iAr
+snippet '''z' "user" ir
 \Zeta
 endsnippet
 priority 0
 
 context "math()"
-snippet ''h' "user" iAr
+snippet ''h' "user" ir
 \eta
 endsnippet
 
 priority 101
 context "math()"
-snippet '''h' "user" iAr
+snippet '''h' "user" ir
 \Eta
 endsnippet
 priority 0
 
 context "math()"
-snippet ''th|'0' "user" iAr
+snippet ''th|'0' "user" ir
 \theta
 endsnippet
 
 priority 101
 context "math()"
-snippet '''th' "user" iAr
+snippet '''th' "user" ir
 \Theta
 endsnippet
 priority 0
 
 context "math()"
-snippet ''i' "user" iAr
+snippet ''i' "user" ir
 \iota
 endsnippet
 
 priority 101
 context "math()"
-snippet '''i' "user" iAr
+snippet '''i' "user" ir
 \Iota
 endsnippet
 priority 0
 
 context "math()"
-snippet ''k' "user" iAr
+snippet ''k' "user" ir
 \kappa
 endsnippet
 
 priority 101
 context "math()"
-snippet '''k' "user" iAr
+snippet '''k' "user" ir
 \Kappa
 endsnippet
 priority 0
 
 context "math()"
-snippet ''l' "user" iAr
+snippet ''l' "user" ir
 \lambda
 endsnippet
 
 priority 101
 context "math()"
-snippet '''l' "user" iAr
+snippet '''l' "user" ir
 \Lambda
 endsnippet
 priority 0
 
 context "math()"
-snippet ''m' "user" iAr
+snippet ''m' "user" ir
 \mu
 endsnippet
 
 priority 101
 context "math()"
-snippet '''m' "user" iAr
+snippet '''m' "user" ir
 \Mu
 endsnippet
 priority 0
 
 context "math()"
-snippet ''x' "user" iAr
+snippet ''x' "user" ir
 \xi
 endsnippet
 
 priority 101
 context "math()"
-snippet '''x' "user" iAr
+snippet '''x' "user" ir
 \Xi
 endsnippet
 priority 0
 
 context "math()"
-snippet ''p' "user" iAr
+snippet ''p' "user" ir
 \pi
 endsnippet
 
 priority 101
 context "math()"
-snippet '''p' "user" iAr
+snippet '''p' "user" ir
 \Pi
 endsnippet
 priority 0
 
 context "math()"
-snippet ''r|'6' "user" iAr
+snippet ''r|'6' "user" ir
 \rho
 endsnippet
 
 priority 101
 context "math()"
-snippet '''r|''6' "user" iAr
+snippet '''r|''6' "user" ir
 \Rho
 endsnippet
 priority 0
 
 context "math()"
-snippet ''s|'7' "user" iAr
+snippet ''s|'7' "user" ir
 \sigma
 endsnippet
 
 priority 101
 context "math()"
-snippet '''s|''7' "user" iAr
+snippet '''s|''7' "user" ir
 \Sigma
 endsnippet
 priority 0
 
 context "math()"
-snippet ''t' "user" iAr
+snippet ''t' "user" ir
 \tau
 endsnippet
 
 priority 101
 context "math()"
-snippet '''t' "user" iAr
+snippet '''t' "user" ir
 \Tau
 endsnippet
 priority 0
 
 context "math()"
-snippet ''5' "user" iAr
+snippet ''5' "user" ir
 \varphi
 endsnippet
 
 priority 101
 context "math()"
-snippet '''5' "user" iAr
+snippet '''5' "user" ir
 \Phi
 endsnippet
 priority 0
 
 context "math()"
-snippet ''4' "user" iAr
+snippet ''4' "user" ir
 \psi
 endsnippet
 
 priority 101
 context "math()"
-snippet '''4' "user" iAr
+snippet '''4' "user" ir
 \Psi
 endsnippet
 priority 0
 
 context "math()"
-snippet ''n' "nabla" iAr
+snippet ''n' "nabla" ir
 \nabla
 endsnippet
 
 context "math()"
-snippet ''o' "user" iAr
+snippet ''o' "user" ir
 \omega
 endsnippet
 
 priority 101
 context "math()"
-snippet '''o' "user" iAr
+snippet '''o' "user" ir
 \Omega
 endsnippet
 priority 0
 
 context "math()"
-snippet ';9' "user" iAr
+snippet '9' "user" ir
 \left( $1 \right)$0
 endsnippet
 
 context "math()"
-snippet ';\[' "user" iAr
+snippet '\[' "user" ir
 \left[ $1 \right]$0
 endsnippet
 
 context "math()"
-snippet ';\{' "user" iAr
+snippet '\{' "user" ir
 \left\{ $1 \right\}$0
 endsnippet
 
 context "math()"
-snippet '==' "user" iAr
+snippet '==' "user" ir
 +
 endsnippet
 
+priority 101
 context "math()"
-snippet '([A-Za-z]+)(scr|frak|bb|cal) ' "user" iAr
+snippet '([A-Za-z]+)(scr|frak|bb|cal)' "user" ir
 \math`!p snip.rv = match.group(2) + '{' + match.group(1).upper()`}
 endsnippet
 
 context "math()"
-snippet '([A-Za-z0-9]+)(bf|rm) ' "user" iAr
+snippet '([A-Za-z0-9]+)(bf|rm)' "user" ir
 \math`!p snip.rv = match.group(2) + '{' + match.group(1)`}
 endsnippet
 
 context "math()"
-snippet '(\\?[A-Za-z0-9]+)bs ' "user" iAr
+snippet '(\\?[A-Za-z0-9]+)bs' "user" ir
 \boldsymbol{`!p snip.rv = match.group(1)`}
 endsnippet
 
 context "math()"
-snippet '(\\?[A-Za-z0-9]+)vv' "user" iAr
+snippet '(\\?[A-Za-z0-9]+)v' "user" ir
 \vec{`!p snip.rv = match.group(1)`}
 endsnippet
 
 context "math()"
-snippet '//' "user" iAr
+snippet '/' "user" ir
 \dfrac{${1:${VISUAL}}}{$2}$0
 endsnippet
 
 priority 101
 context "math()"
-snippet '(\\?[A-Za-z0-9_^{}]+)//' "user" iAr
+snippet '(\\?[A-Za-z0-9_^{}]+)/' "user" ir
 \dfrac{`!p snip.rv = match.group(1)`}{$1}$0
 endsnippet
 priority 0
 
 context "math()"
-snippet ';\\' "user" iAr
+snippet '\\' "user" ir
 \bigg|$0
 endsnippet
 
 context "math()"
-snippet ';\|' "user" wAr
+snippet '\|' "user" wAr
 \left| $1 \right|$0
 endsnippet
 
+priority 0
 context "math()"
-snippet ';ii' "user" iAr
+snippet 'i' "user" ir
 \mathrm{i}
 endsnippet
 
 context "math()"
-snippet ';ee' "user" iAr
+snippet 'e' "user" ir
 \mathrm{e}
 endsnippet
 
 context "math()"
-snippet ';dd' "user" iAr
+snippet 'd' "user" ir
 \mathrm{d}
 endsnippet
 
 context "math()"
-snippet ';pp' "user" iAr
+snippet 'p' "user" ir
 \partial 
 endsnippet
+priority 101
 
 context "math()"
-snippet ';d/' "diff" iAr
+snippet 'd/' "diff" ir
 \frac{\mathrm{d}}{\mathrm{d}$1}$0
 endsnippet
 
 context "math()"
-snippet ';p/' "partial" iAr
+snippet 'p/' "partial" ir
 \frac{\partial}{\partial{${1:${VISUAL}}}}$0
 endsnippet
 
 context "math()"
-snippet ';'' "user" iAr
+snippet ''' "user" ir
 \dot{$1}$0
 endsnippet
 
 context "math()"
-snippet ';x' "user" iAr
+snippet 'x' "user" ir
 \times
 endsnippet
 
 context "math()"
-snippet ';\.' "user" iAr
+snippet '\.' "user" ir
 \cdot
 endsnippet
 
 context "math()"
-snippet ';6' "user" iAr
+snippet '6' "user" ir
 \wedge
 endsnippet
 
 context "math()"
-snippet '_' "user" iAr
+snippet '_' "user" ir
 _{$1}$0
 endsnippet
 
 context "math()"
-snippet ';\*' "user" iAr
+snippet '\*' "user" ir
 \star
 endsnippet
 
 context "math()"
-snippet ';gt' "user" iAr
+snippet 'gt' "user" ir
 > 
 endsnippet
 
 context "math()"
-snippet ';lt' "user" iAr
+snippet 'lt' "user" ir
 < 
 endsnippet
 
 context "math()"
-snippet ';(geq|leq|to|neq|sin|cos|tan|sec|csc|cot|sh|ch|th|cth|ln|log|exp)' "user" iAr
+snippet '(geq|leq|to|neq|sin|cos|tan|sec|csc|cot|sh|ch|th|cth|ln|log|exp)' "user" ir
 \\`!p snip.rv = match.group(1)` 
 endsnippet
 
+priority 0
 context "math()"
-snippet ';in' "user" iAr
+snippet 'in' "user" ir
 \in
 endsnippet
+priority 101
 
 context "math()"
-snippet ';tg' "user" iAr
+snippet 'tg' "user" ir
 \tan
 endsnippet
 
 context "math()"
-snippet ';asin' "user" iAr
+snippet 'asin' "user" ir
 \sin^{-1}
 endsnippet
 
 context "math()"
-snippet ';acos' "user" iAr
+snippet 'acos' "user" ir
 \cos^{-1}
 endsnippet
 
 context "math()"
-snippet ';atg' "user" iAr
+snippet 'atg' "user" ir
 \tan^{-1}
 endsnippet
 
 context "math()"
-snippet ';actg' "user" iAr
+snippet 'actg' "user" ir
 \cot^{-1}
 endsnippet
 
 context "math()"
-snippet ';ash' "user" iAr
+snippet 'ash' "user" ir
 \sinh^{-1}
 endsnippet
 
 context "math()"
-snippet ';ach' "user" iAr
+snippet 'ach' "user" ir
 \cosh^{-1}
 endsnippet
 
 context "math()"
-snippet ';ath' "user" iAr
+snippet 'ath' "user" ir
 \tanh^{-1}
 endsnippet
 
 context "math()"
-snippet ';acth' "user" iAr
+snippet 'acth' "user" ir
 \coth^{-1}
 endsnippet
 
 context "math()"
-snippet ';to' "user" iAr
+snippet 'to' "user" ir
 \to
 endsnippet
 
 context "math()"
-snippet ';inf' "user" iAr
+snippet 'inf' "user" ir
 \infty
 endsnippet
 
+priority 0
 context "math()"
-snippet ';S' "user" iAr
+snippet 'S' "user" ir
 \int 
 endsnippet
 
+priority 1
 context "math()"
-snippet ';sq' "user" iAr
+snippet 'oS' "user" ir
+\oint 
+endsnippet
+
+context "math()"
+snippet 'SS' "user" ir
+\iint 
+endsnippet
+
+priority 2
+context "math()"
+snippet 'oSS' "user" ir
+\oiint 
+endsnippet
+
+context "math()"
+snippet 'SSS' "user" ir
+\iiint 
+endsnippet
+
+priority 101
+context "math()"
+snippet 'oSSS' "user" ir
+\oiiint 
+endsnippet
+
+context "math()"
+snippet 'sq' "user" ir
 \sqrt{$1}$0
 endsnippet
 
 context "math()"
-snippet ';lim' "user" wAr
+snippet 'lim' "user" wAr
 \lim_{$1}$0
 endsnippet
 
 context "math()"
-snippet '\.([A-Za-z0-9-+/\\]+)\.' "user" iAr
+snippet '\.([A-Za-z0-9-+/\\]+)\.' "user" ir
 ^{`!p snip.rv = match.group(1)`}
 endsnippet
 
 context "math()"
-snippet '\^\{([^}]*)\}\.' "user" iAr
+snippet '\^\{([^}]*)\}\.' "user" ir
 _{`!p snip.rv = match.group(1)`}
 endsnippet
 
 context "math()"
-snippet '_\{([^}=]*)\}\.' "user" iAr
+snippet '_\{([^}=]*)\}\.' "user" ir
 ^{`!p snip.rv = match.group(1)`}
 endsnippet
 
 context "math()"
-snippet '\^\{([^}]*)\},\.' "user" iAr
+snippet '\^\{([^}]*)\},\.' "user" ir
 ^{`!p snip.rv = match.group(1)`}_{$1}$0
 endsnippet
 
 context "math()"
-snippet '([\^_]\{(?:[a-z]|\\[a-z]+))\};=' "user" iAr
+snippet '([\^_]\{(?:[a-z]|\\[a-z]+))\};=' "user" ir
 `!p snip.rv = match.group(1)`+1}
 endsnippet
 
 context "math()"
-snippet '([\^_]\{(?:[a-z]|\\[a-z]+))\};-' "user" iAr
+snippet '([\^_]\{(?:[a-z]|\\[a-z]+))\};-' "user" ir
 `!p snip.rv = match.group(1)`-1}
 endsnippet
 
 context "math()"
-snippet '_\{([^}]*)\},\.' "user" iAr
+snippet '_\{([^}]*)\},\.' "user" ir
 _{`!p snip.rv = match.group(1)`}^{$1}$0
 endsnippet
 
 context "math()"
-snippet ';ali' "user" wAr
+snippet 'ali' "user" wr
 \begin{aligned}
 $1
 \end{aligned}
 endsnippet
 
 context "math()"
-snippet ';cases' "cases" wAr
+snippet 'cases' "cases" wr
 \begin{cases}
 	$1
 \end{cases}$0
 endsnippet
 
 context "math()"
-snippet '-=' "linesep" iAr
+snippet '-=' "linesep" ir
 
 &=
 endsnippet
 
 context "math()"
-snippet '--' "sep" iAr
+snippet '-' "sep" ir
 &
 endsnippet
 
 context "math()"
 pre_expand "gen_mat(snip, match.group(1), int(match.group(2)), int(match.group(3)))"
-snippet ';(|[p|P|b|B|v|V])mat(\d)(\d) ' "matnm" wAr
+snippet '(|[p|P|b|B|v|V])mat(\d)(\d)' "matnm" wr
 endsnippet
 
+priority 0
 context "math()"
-snippet ';h' "hat" wAr
+snippet 'h' "hat" wr
 \hat{${1:${VISUAL}}}
 endsnippet
 
 context "math()"
-snippet ';v ' "vec" wAr
+snippet 'v' "vec" wr
 \vec{${1:${VISUAL}}}
 endsnippet
 
 priority 101
 context "math()"
-snippet ';~' "tidle" wA
+snippet '~' "tidle" w
 \sim
 endsnippet
 priority 0
 
 priority 101
 context "math()"
-snippet ';o' "tidle" wA
+snippet 'o' "tidle" w
 \circ
 endsnippet
 priority 0
