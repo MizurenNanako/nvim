@@ -9,6 +9,10 @@ return {
     build = "cd app && yarn install",
     init = function()
         vim.g.mkdp_filetypes = { "markdown" }
+        -- mathml
+        vim.g.mkdp_preview_options = {
+            katex = { output = "mathml" },
+        }
         vim.g.mkdp_browser = "firefox"
         vim.g.mkdp_echo_preview_url = 1
         -- " like '/Users/username/markdown.css' or expand('~/markdown.css')

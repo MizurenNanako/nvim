@@ -340,28 +340,29 @@ snippet '([A-Za-z]+)(scr|frak|bb|cal)' "user" ir
 endsnippet
 
 context "math()"
-snippet '([A-Za-z0-9]+)(bf|rm)' "user" ir
+snippet '([A-Za-z0-9]+)(bf|rm)' "fontchange" ir
 \math`!p snip.rv = match.group(2) + '{' + match.group(1)`}
 endsnippet
 
 context "math()"
-snippet '(\\?[A-Za-z0-9]+)bs' "user" ir
+snippet '(\\?[A-Za-z0-9]+)bs' "boldsymbol" ir
 \boldsymbol{`!p snip.rv = match.group(1)`}
 endsnippet
 
 context "math()"
-snippet '(\\?[A-Za-z0-9]+)v' "user" ir
+snippet '(\\?[A-Za-z0-9]+)v' "vector" ir
 \vec{`!p snip.rv = match.group(1)`}
 endsnippet
 
+priority 80
 context "math()"
-snippet '/' "user" ir
+snippet '/' "fraction" ir
 \dfrac{${1:${VISUAL}}}{$2}$0
 endsnippet
 
-priority 101
+priority 81
 context "math()"
-snippet '(\\?[A-Za-z0-9_^{}]+)/' "user" ir
+snippet '(\\?[A-Za-z0-9_^{}]+)/' "fraction" ir
 \dfrac{`!p snip.rv = match.group(1)`}{$1}$0
 endsnippet
 priority 0
@@ -372,7 +373,7 @@ snippet '\\' "user" ir
 endsnippet
 
 context "math()"
-snippet '\|' "user" wAr
+snippet '\|' "user" wr
 \left| $1 \right|$0
 endsnippet
 
@@ -413,6 +414,7 @@ snippet ''' "user" ir
 \dot{$1}$0
 endsnippet
 
+priority 0
 context "math()"
 snippet 'x' "user" ir
 \times
@@ -449,60 +451,8 @@ snippet 'lt' "user" ir
 endsnippet
 
 context "math()"
-snippet '(geq|leq|to|neq|sin|cos|tan|sec|csc|cot|sh|ch|th|cth|ln|log|exp)' "user" ir
-\\`!p snip.rv = match.group(1)` 
-endsnippet
-
-priority 0
-context "math()"
 snippet 'in' "user" ir
 \in
-endsnippet
-priority 101
-
-context "math()"
-snippet 'tg' "user" ir
-\tan
-endsnippet
-
-context "math()"
-snippet 'asin' "user" ir
-\sin^{-1}
-endsnippet
-
-context "math()"
-snippet 'acos' "user" ir
-\cos^{-1}
-endsnippet
-
-context "math()"
-snippet 'atg' "user" ir
-\tan^{-1}
-endsnippet
-
-context "math()"
-snippet 'actg' "user" ir
-\cot^{-1}
-endsnippet
-
-context "math()"
-snippet 'ash' "user" ir
-\sinh^{-1}
-endsnippet
-
-context "math()"
-snippet 'ach' "user" ir
-\cosh^{-1}
-endsnippet
-
-context "math()"
-snippet 'ath' "user" ir
-\tanh^{-1}
-endsnippet
-
-context "math()"
-snippet 'acth' "user" ir
-\coth^{-1}
 endsnippet
 
 context "math()"
@@ -515,7 +465,6 @@ snippet 'inf' "user" ir
 \infty
 endsnippet
 
-priority 0
 context "math()"
 snippet 'S' "user" ir
 \int 
@@ -549,51 +498,66 @@ snippet 'oSSS' "user" ir
 \oiiint 
 endsnippet
 
+priority 50
 context "math()"
-snippet 'sq' "user" ir
+snippet '(geq|leq|to|neq|sin|cos|tan|sec|csc|cot|sh|ch|th|cth|ln|log|exp)' "functions" ir
+\\`!p snip.rv = match.group(1)` 
+endsnippet
+
+priority 51
+context "math()"
+snippet 'a(sin|cos|tan|sec|csc|cot|sh|ch|th|cth)' "rev functions" ir
+\\`!p snip.rv = match.group(1)`^{-1} 
+endsnippet
+
+context "math()"
+snippet 'sq' "sqrt" ir
 \sqrt{$1}$0
 endsnippet
 
 context "math()"
-snippet 'lim' "user" wAr
+snippet 'lim' "limit" wr
 \lim_{$1}$0
 endsnippet
 
+priority 80
+
 context "math()"
-snippet '\.([A-Za-z0-9-+/\\]+)\.' "user" ir
+snippet '\.([A-Za-z0-9-+/\\]+)' "user" ir
 ^{`!p snip.rv = match.group(1)`}
 endsnippet
 
 context "math()"
-snippet '\^\{([^}]*)\}\.' "user" ir
+snippet '\^\{([^}]*)\}' "user" ir
 _{`!p snip.rv = match.group(1)`}
 endsnippet
 
 context "math()"
-snippet '_\{([^}=]*)\}\.' "user" ir
+snippet '_\{([^}=]*)\}' "user" ir
 ^{`!p snip.rv = match.group(1)`}
 endsnippet
 
 context "math()"
-snippet '\^\{([^}]*)\},\.' "user" ir
+snippet '\^\{([^}]*)\},' "user" ir
 ^{`!p snip.rv = match.group(1)`}_{$1}$0
 endsnippet
 
 context "math()"
-snippet '([\^_]\{(?:[a-z]|\\[a-z]+))\};=' "user" ir
+snippet '([\^_]\{(?:[a-z]|\\[a-z]+))\}\+' "user" ir
 `!p snip.rv = match.group(1)`+1}
 endsnippet
 
 context "math()"
-snippet '([\^_]\{(?:[a-z]|\\[a-z]+))\};-' "user" ir
+snippet '([\^_]\{(?:[a-z]|\\[a-z]+))\}\-' "user" ir
 `!p snip.rv = match.group(1)`-1}
 endsnippet
 
 context "math()"
-snippet '_\{([^}]*)\},\.' "user" ir
+snippet '_\{([^}]*)\},' "user" ir
 _{`!p snip.rv = match.group(1)`}^{$1}$0
 endsnippet
 
+priority 101
 context "math()"
 snippet 'ali' "user" wr
 \begin{aligned}
