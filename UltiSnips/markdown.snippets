@@ -1,13 +1,7 @@
 global !p
 def math():
     return vim.exec_lua('''
-        -- local trs = vim.inspect_pos().treesitter
-        -- local res = false
-        -- for _, item in ipairs(trs) do
-        --    if item.capture == "markup.math" then res = true end
-        -- end
-        -- return res
-        return true
+        return Check_in_math()
 ''')
 
 def gen_mat(snip, delim, rows, cols):
