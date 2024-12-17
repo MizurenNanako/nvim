@@ -91,7 +91,7 @@ context "math()"
 snippet '''g' "user" ir
 \Gamma
 endsnippet
-priority 0
+priority 1
 
 context "math()"
 snippet ''d' "user" ir
@@ -358,6 +358,12 @@ priority 81
 context "math()"
 snippet '(\\?[A-Za-z0-9_^{}]+)/' "fraction" ir
 \dfrac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+priority 82
+context "math()"
+snippet '(\\?[A-Za-z0-9_^{}]+)/(\\?[A-Za-z0-9_^{}]+)' "fraction" ir
+\dfrac{`!p snip.rv = match.group(1) + "}{" + match.group(2)`}$0
 endsnippet
 priority 0
 
