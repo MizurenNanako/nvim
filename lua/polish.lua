@@ -20,9 +20,9 @@
 require "dirty_user_job"
 require "user_formatter"
 
-vim.o.tabstop=4
-vim.o.shiftwidth=4
-vim.o.expandtab=true
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
 
 -- if vim.g.neovide then
 --     -- Put anything you want to happen only in Neovide here
