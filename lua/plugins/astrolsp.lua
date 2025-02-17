@@ -125,6 +125,11 @@ return {
                     desc = "Document Highlighting Clear",
                     callback = function() vim.lsp.buf.clear_references() end,
                 },
+                {
+                    event = { "BufRead", "BufNewFile" },
+                    desc = "fucking c header",
+                    callback = function() vim.bo.filetype = "c" end,
+                },
             },
         },
         -- mappings to be set up on attaching of a language server
