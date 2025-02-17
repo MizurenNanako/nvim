@@ -41,16 +41,22 @@ return {
         -- enable servers that you already have installed without mason
         servers = {
             "pyright",
-            "ocamllsp",
+            -- "ocamllsp",
             "rust_analyzer",
             "clangd",
-            "millet",
+            -- "millet",
             -- "hls",
         },
         -- customize language server configuration options passed to `lspconfig`
         ---@diagnostic disable: missing-fields
         config = {
-            clangd = { capabilities = { offsetEncoding = "utf-8" } },
+            clangd = {
+                root_dir = function(fname)
+                    local util = require "lspconfig.util"
+                    return util.root_pattern("CMakeLists.txt", "include/", "src/")(fname) or util.path.dirname(fname)
+                end,
+                capabilities = { offsetEncoding = "utf-8" },
+            },
             ocamllsp = {
                 root_dir = function(fname)
                     local util = require "lspconfig.util"
@@ -68,6 +74,23 @@ return {
                         or util.path.dirname(fname)
                 end,
                 capabilities = {},
+            },
+            pyright = {
+                root_dir = function(fname)
+                    local util = require "lspconfig.util"
+                    return util.root_pattern("pyproject.toml", "setup.py", "setup.cfg", "requirements.txt")(fname)
+                        -- Fallback to the current file's directory (single-file mode)
+                        or util.path.dirname(fname)
+                end,
+                settings = {
+                    python = {
+                        analysis = {
+                            autoSearchPaths = true,
+                            useLibraryCodeForTypes = true,
+                            diagnosticMode = "workspace",
+                        },
+                    },
+                },
             },
         },
         -- customize how language servers are attached
